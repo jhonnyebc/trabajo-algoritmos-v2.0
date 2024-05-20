@@ -3,6 +3,8 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <limits>
+#include <fstream>
 
 using namespace std;
 
