@@ -173,6 +173,27 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
     }
 }
 
+void crearArchivoResumenJugadores(const vector<Jugador>& jugadores) {
+	
+    ofstream archivo("resumen_jugadores.txt");
+
+    if (archivo.is_open()) {
+    	vector<Jugador> jugadoresOrdenados = jugadores; // Copia de los jugadores para no modificar el original
+		mergeSort(jugadoresOrdenados, 0, jugadoresOrdenados.size() - 1);
+		
+		archivo << "Resumen de jugadores ordenados por puntaje:\n";
+        for (const auto& jugador : jugadoresOrdenados) {
+        	archivo << jugador.nombre << " - Puntuacion: " << jugador.puntaje << endl;
+        }
+        archivo.close();
+        cout << "Archivo de resumen de jugadores creado exitosamente." << endl;
+    } 
+	else {
+		cout << "No se pudo abrir el archivo de resumen de jugadores." << endl;
+    }
+}
+
+
 int main() {
     // Inicializacion del generador de números aleatorios
     srand(static_cast<unsigned>(time(0)));
