@@ -202,15 +202,30 @@ int n1 = medio - izquierda + 1;
 
 int n2 = derecha - medio;
 
-        if (!correcto) {
-            cout << "La palabra correcta era: " << palabraActual.palabra << endl;
-            puntaje -= penalizacionPorFallo;  // Penaliza por no adivinar la palabra
-            fallosConsecutivos++;
+        // Crear arreglos temporales
+vector<Jugador> izquierdaJugadores(n1);
+vector<Jugador> derechaJugadores(n2);
 
-            // Verifica si el jugador ha perdido el juego por fallos consecutivos
-            if (fallosConsecutivos == maximoFallosConsecutivos) {
-                cout << "Has perdido el juego. Demasiados fallos consecutivos." << endl;
-                break;
+// Copiar los datos a los arreglos temporales izquierdo[] y derecho[]
+for (int i = 0; i < n1; i++)
+izquierdaJugadores[i] = jugadores[izquierda + i];
+for (int j = 0; j < n2; j++)
+derechaJugadores[j] = jugadores[medio + 1 + j];
+
+// Mezclar los arreglos temporales de vuelta en arr[izquierda..derecha]
+int i = 0; // Indice inicial del primer subarreglo
+int j = 0; // Indice inicial del segundo subarreglo
+int k = izquierda; // Indice inicial del subarreglo mezclado
+while (i < n1 && j < n2) {
+if (izquierdaJugadores[i].puntaje >= derechaJugadores[j].puntaje) {
+jugadores[k] = izquierdaJugadores[i];
+i++;
+} else {
+jugadores[k] = derechaJugadores[j];
+j++;
+}
+k++;
+}
             }
         }
 
@@ -296,6 +311,7 @@ getline(cin, nombreJugador2);
         {"atenas", "Capital de Grecia.", 4 , 20},
         {"moscu", "Capital de Rusia." , 3 , 15},
         {"bruselas", "Capital de Belgica." , 5, 30},
+	
     };
     
     // Crea el archivo de preguntas
