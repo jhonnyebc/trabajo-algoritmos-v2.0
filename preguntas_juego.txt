@@ -1,0 +1,25 @@
+Preguntas de las palabras a adivinar:
+Capital de Espana. - Respuesta: madrid
+Capital de Francia. - Respuesta: paris
+Capital de Inglaterra. - Respuesta: londres
+Capital de Portugal. - Respuesta: lisboa
+Capital de Italia. - Respuesta: roma
+Capital de Alemania. - Respuesta: berlin
+Capital de Suecia. - Respuesta: estocolmo
+Capital de Grecia. - Respuesta: atenas
+Capital de Rusia. - Respuesta: moscu
+Capital de Belgica. - Respuesta: bruselas
+Capital de Noruega. - Respuesta: oslo
+Capital de Polonia. - Respuesta: varsovia
+
+Preguntas adicionales:
+Cuantos huesos tiene el ser humano? - Respuesta: 206
+Cuantos departamentos tiene Colombia? - Respuesta: 20
+Cuantos anos duro la Guerra de los Mil Dias? - Respuesta: 3
+Cuantos planetas hay en el sistema solar? - Respuesta: 8
+Cual es el oceano mas grande del mundo? (1: Atlantico, 2: Indico, 3: Pacifico) - Respuesta: 3
+Cuantos rios principales hay en Colombia? - Respuesta: 7
+Cuantos continentes tiene el mundo? - Respuesta: 7
+Cuantas letras tiene el alfabeto espanol? - Respuesta: 27
+Cuantos elementos tiene la tabla periodica? - Respuesta: 118
+Cuantas semanas tiene un ano normal? - Respuesta: 52
