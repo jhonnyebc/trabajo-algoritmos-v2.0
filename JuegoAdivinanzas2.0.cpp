@@ -113,7 +113,7 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
                 puntaje += (intentosMaximos - intentos) * 10 + puntosRapidez;
                 correcto = true;
                 fallosConsecutivos = 0;  // Resetea el contador de fallos consecutivos
-            } else {
+                 } else {
                 cout << "Incorrecto. Intentos restantes: " << intentosMaximos - intentos - 1 << endl;
 
                 // Si no ha excedido el límite de pistas, ofrece una pista
