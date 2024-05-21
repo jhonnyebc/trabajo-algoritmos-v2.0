@@ -311,6 +311,24 @@ getline(cin, nombreJugador2);
         {"atenas", "Capital de Grecia.", 4 , 20},
         {"moscu", "Capital de Rusia." , 3 , 15},
         {"bruselas", "Capital de Belgica." , 5, 30},
+	{"oslo", "Capital de Noruega.", 4, 20},
+        {"varsovia", "Capital de Polonia.", 5, 30},
+};
+
+// Definición de desafíos adicionales
+        vector<Desafio> desafios = {
+        {"Cuantos huesos tiene el ser humano?", 206},
+        {"Cuantos departamentos tiene Colombia?", 20},
+        {"Cuantos anos duro la Guerra de los Mil Dias?", 3},
+        {"Cuantos planetas hay en el sistema solar?", 8},
+        {"Cual es el oceano mas grande del mundo? (1: Atlantico, 2: Indico, 3: Pacifico)", 3},
+        {"Cuantos rios principales hay en Colombia?", 7},
+        {"Cuantos continentes tiene el mundo?", 7},
+        {"Cuantas letras tiene el alfabeto espanol?", 27},
+        {"Cuantos elementos tiene la tabla periodica?",118},
+        {"Cuantas semanas tiene un ano normal?",52},
+};
+
 	
     };
     
