@@ -90,11 +90,12 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
         // Marca el tiempo de inicio para calcular la rapidez del jugador
         time_t tiempoInicio = time(0);
 
-        while (intentos < intentosMaximos && !correcto) {
-            // Lógica para que el jugador ingrese la palabra
-            cout << "Ingresa la palabra: ";
+        while (intentos < intentosMaximos && !correcto){
+		    // Lógica para que el jugador ingrese la palabra
+		    cout << jugadorActual << " ingresa la palabra: ";
             string entradaJugador;
             cin >> entradaJugador;
+
 
             // Compara la entrada del jugador con la palabra correcta
             if (entradaJugador == palabraActual.palabra) {
