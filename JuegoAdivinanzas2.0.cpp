@@ -147,10 +147,17 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
 
         cout << "Puntuacion actual: " << puntaje << " / " << puntajeMaximo << endl;
 
-        // Realiza un desafio adicional para obtener puntos adicionales
-        cout << "Desafio adicional! - Cuantos huesos tiene el ser humano? ";
+        // Cambia el turno al siguiente jugador
+        turnoJugador1 = !turnoJugador1;
+
+        // Realiza un desafío adicional para obtener puntos adicionales
+        Desafio desafioActual = seleccionarDesafioAleatorio(desafios);
+        cout << "Desafio adicional para " << jugadorActual << "! - " << desafioActual.pregunta << ": ";
         int respuestaDesafio;
-        cin >> respuestaDesafio;
+        if (!(cin >> respuestaDesafio)){ // Verificar si la entrada no es un número entero válido
+		    cout << "Respuesta incorrecta. Debe ingresar un numero entero." << endl;
+            cin.clear(); // Limpiar el flag de error del flujo de entrada
+
 
         if (respuestaDesafio == 206) {
             cout << " Correcto! + " << puntosPorDesafioCompleto << " puntos por completar el desafio adicional." << endl;
