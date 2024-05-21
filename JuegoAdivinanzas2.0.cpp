@@ -23,6 +23,11 @@ Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
     return palabras[indice];
 }
 
+// Funcion para seleccionar una palabra aleatoria del conjunto de palabras
+Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
+    int indice = rand() % palabras.size();
+    return palabras[indice];
+
 // Función para mostrar la definición de una palabra
 void mostrarDefinicion(const Palabra& palabra) {
     cout << "Definicion: " << palabra.definicion << endl;
