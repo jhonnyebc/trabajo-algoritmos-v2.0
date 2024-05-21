@@ -216,9 +216,12 @@ int main() {
         {"moscu", "Capital de Rusia." , 3 , 15},
         {"bruselas", "Capital de Belgica." , 5, 30},
     };
+    
+    // Crea el archivo de preguntas
+    crearArchivoPreguntas(palabras, desafios);
 
     // Inicia el juego
-    jugar(palabras, nombreJugador);
+    jugar(palabras, desafios, nombreJugador1, nombreJugador2);
 
     return 0;
 }
