@@ -27,6 +27,12 @@ Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
 Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
     int indice = rand() % palabras.size();
     return palabras[indice];
+    
+// Funcion para seleccionar un desafío aleatorio
+Desafio seleccionarDesafioAleatorio(const vector<Desafio>& desafios) {
+int indice = rand() % desafios.size();
+return desafios[indice];
+}
 
 // Función para mostrar la definición de una palabra
 void mostrarDefinicion(const Palabra& palabra) {
