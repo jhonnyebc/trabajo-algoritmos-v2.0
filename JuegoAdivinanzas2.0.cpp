@@ -33,11 +33,6 @@ Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
     int indice = rand() % palabras.size();
     return palabras[indice];
 }
-
-// Funcion para seleccionar una palabra aleatoria del conjunto de palabras
-Palabra seleccionarPalabraAleatoria(const vector<Palabra>& palabras) {
-    int indice = rand() % palabras.size();
-    return palabras[indice];
     
 // Funcion para seleccionar un desafío aleatorio
 Desafio seleccionarDesafioAleatorio(const vector<Desafio>& desafios) {
@@ -118,7 +113,7 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
             // Compara la entrada del jugador con la palabra correcta
             if (entradaJugador == palabraActual.palabra) {
                 time_t tiempoFin = time(0);
-                int segundosTranscurridos = static_cast<int>(difftime(tiempoFin, tiempoInicio);
+                int segundosTranscurridos = static_cast<int>(difftime(tiempoFin, tiempoInicio));
 
                 // Calcula los puntos adicionales por adivinar rapido
                 int puntosRapidez = max(0, puntosPorAdivinanzaRapida - segundosTranscurridos);
