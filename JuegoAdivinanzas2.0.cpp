@@ -271,6 +271,18 @@ int main() {
     string nombreJugador;
     cout << "Por favor, ingresa tu nombre: ";
     getline(cin, nombreJugador);
+	
+// Solicitar el nombre de los jugadores
+
+string nombreJugador1, nombreJugador2;
+
+cout << "Por favor, ingresa el nombre del Jugador 1: ";
+
+getline(cin, nombreJugador1);
+
+cout << "Por favor, ingresa el nombre del Jugador 2: ";
+
+getline(cin, nombreJugador2);
 
     // Definicion de palabras con sus respectivas definiciones, dificultades y puntos
     vector<Palabra> palabras = {
