@@ -137,7 +137,7 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
 
                     if (respuesta == "Si" || respuesta == "si") {
                         mostrarPista(palabraActual.palabra);
-                        puntaje -= penalizacionPorPista;  // Penaliza por aceptar la pista
+                        puntajeActual -= penalizacionPorPista;  // Penaliza por aceptar la pista
                         pistasUsadas++;
                     }
                 }
