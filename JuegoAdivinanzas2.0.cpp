@@ -34,8 +34,9 @@ void mostrarPista(const string& palabra) {
 }
 
 // Funcion para jugar al juego
-void jugar(const vector<Palabra>& palabras, const string& nombreJugador) {
-    int puntaje = 0;
+void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, const string& nombreJugador1, const string& nombreJugador2) {
+    int puntajeJugador1 = 0;
+    int puntajeJugador2 = 0;
     const int puntajeMaximo = 300;  // Puntuación máxima para ganar el juego
     const int intentosMaximos = 3; // Número máximo de intentos por palabra
     const int pistasMaximas = 1;   // Número máximo de pistas por palabra
