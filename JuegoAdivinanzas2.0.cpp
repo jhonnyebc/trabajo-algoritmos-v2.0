@@ -132,6 +132,29 @@ void jugar(const vector<Palabra>& palabras, const vector<Desafio>& desafios, con
                 intentos++;
             }
         }
+	    if (!correcto) {
+
+cout << "La palabra correcta era: " << palabraActual.palabra << endl;
+
+puntajeActual -= penalizacionPorFallo; // Penaliza por no adivinar la palabra
+
+fallosConsecutivosActual++;
+
+// Verifica si el jugador ha perdido el juego por fallos consecutivos
+
+if (fallosConsecutivosActual == maximoFallosConsecutivos) {
+
+cout << "Has perdido el juego " << jugadorActual << ". Demasiados fallos consecutivos." << endl;
+
+break;
+
+}
+
+}
+
+cout << "Puntuacion de " << nombreJugador1 << ": " << puntajeJugador1 << " / " << puntajeMaximo << endl;
+
+cout << "Puntuacion de " << nombreJugador2 << ": " << puntajeJugador2 << " / " << puntajeMaximo << endl;
 
         if (!correcto) {
             cout << "La palabra correcta era: " << palabraActual.palabra << endl;
