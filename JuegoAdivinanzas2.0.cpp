@@ -155,6 +155,52 @@ break;
 cout << "Puntuacion de " << nombreJugador1 << ": " << puntajeJugador1 << " / " << puntajeMaximo << endl;
 
 cout << "Puntuacion de " << nombreJugador2 << ": " << puntajeJugador2 << " / " << puntajeMaximo << endl;
+	    
+	    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Descartar la entrada no válida
+
+} else {
+
+if (respuestaDesafio == desafioActual.respuesta) {
+
+cout << "Correcto! + " << puntosPorDesafioCompleto << " puntos por completar el desafio adicional." << endl;
+
+puntajeActual += puntosPorDesafioCompleto;
+
+} else {
+
+cout << "Incorrecto. No ganas puntos adicionales por el desafio." << endl;
+
+}
+
+}
+
+// Actualiza el archivo de jugadores y puntajes
+
+ofstream archivo("jugadores_puntajes.txt", ios::app);
+
+if (archivo.is_open()) {
+
+archivo << jugadorActual << " " << puntajeActual << endl;
+
+archivo.close();
+
+cout << "Informacion del jugador actualizada exitosamente." << endl;
+
+} else {
+
+cout << "No se pudo abrir el archivo de jugadores y puntajes." << endl;
+
+}
+
+}
+
+}
+
+void merge(vector<Jugador>& jugadores, int izquierda, int medio, int derecha) {
+
+int n1 = medio - izquierda + 1;
+
+int n2 = derecha - medio;
 
         if (!correcto) {
             cout << "La palabra correcta era: " << palabraActual.palabra << endl;
